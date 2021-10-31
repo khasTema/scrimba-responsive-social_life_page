@@ -1,0 +1,336 @@
+/*  Fonts
+    -----
+    font-family: 'Lora', serif;
+    font-family: 'Ubuntu', sans-serif;
+ */
+
+ *{
+     box-sizing: border-box;
+ }
+
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ p,
+ ul,
+ li{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    color:#707070;
+    font-weight: 300;
+ }
+
+ /* typography */
+
+ h1,
+ h2,
+ h3{
+    font-family: 'Lora', serif; 
+    color: #143774;
+    font-weight: 400;
+ }
+
+ h1{
+    font-size: 2rem;
+    margin-bottom: 0.1em;
+}
+
+p{
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.link-style{
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1792d2;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+a.link-style:hover{
+    color: #707070;
+}
+
+.subtitle{
+    font-size: 0.75rem;
+}
+
+.article-info{
+    font-size: 0.875rem;
+}
+
+.article-body a{
+    font-weight: bolder;
+}
+
+.article-body span{
+    font-weight: 700;
+}
+
+.article-body a{
+    color: #1792d2;
+}
+
+.article-body a:hover{
+    color: #707070;
+}
+
+.widget-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+
+
+/* ------------------------
+------Layout------------
+------------------------ */
+
+/* ---header----- */
+
+ header{
+     background-color: #f8f8f8;
+     padding: 2em 0;
+     text-align: center;
+ }
+
+.container{
+    width: 90%;
+    max-width: 1040px; 
+    margin: 0 auto;
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+nav li{
+    margin-top: 0.5em;
+    
+}
+
+
+nav a{
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #707070;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.25em 0;
+    
+}
+
+nav a:hover, 
+nav a:focus{
+    color: #1792d2;
+}
+
+.current-page{
+    border-bottom: 2px solid #707070;
+}
+
+.current-page:hover{
+    color: #707070;
+}
+
+@media (min-width: 830px){
+    header{
+        text-align: left;
+    }
+    .container-nav{
+        flex-direction: row;
+    }
+    nav ul{
+        flex-direction: row;
+    }
+    nav li{
+        margin-left: 2em;
+    }
+}
+
+/* ---------main------------- */
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container-main{
+    margin-top: 3em;
+    /* border: 1px dashed red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    /* width: 71.4%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-title{
+    margin-bottom: 1em;
+}
+
+.article-featured{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 2px solid #EBEBEB;
+    margin-bottom: 3em;
+}
+
+
+
+.article-recent{
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+
+
+.article-read-more{
+    display: inline-block;
+    /* background: #707070; */
+    padding: 2em 0;
+}
+
+.article-info{
+    margin: 1em 0 1.5em;
+}
+
+/* aside{
+    width: 24%;
+} */
+
+.sidebar-widget{
+    border: 20px solid #EBEBEB;
+    padding: 1em 1em 2em;
+    margin-bottom: 3em;
+}
+
+.sidebar-widget:last-child{
+    padding-bottom: 0;
+}
+
+.widget-image{
+    margin-bottom: 1em;
+}
+
+.widget-recent-post{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #EBEBEB;
+    padding-bottom: 1.5em;
+}
+
+.widget-recent-post:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+/* css for ABOUT ME page */
+.about-me-image{
+    margin-bottom: 3em;
+}
+
+.article-title-about-me{
+    color: #1792d2;
+    margin-bottom: 1em;
+}
+
+
+/* -----foter---------------- */
+footer{
+    background-color: #143774;
+    text-align: center;
+    padding: 4em 0;
+    margin-top: 3em;
+}
+.footer-title{
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+/* -----------------------------------
+--------------MEDIA----------------
+----------------------------------- */
+
+@media (min-width: 830px) {
+    .container-main{
+        flex-direction: row;
+    }
+    main{
+        width: 71.4%;
+    }
+    aside{
+        width: 24%;
+    }
+    .article-recent{
+        flex-direction: row-reverse;
+    }
+    .article-recent-main{
+        width: 72% ;
+    }
+    .article-recent-secondary{
+        width: 24%;
+    }
+    .article-featured .article-image{
+        order: -2;
+    }
+    .article-featured .article-info{
+        order: -1;
+    }
+    .article-featured .article-image{
+        object-position: bottom;
+        max-height: 320px;
+    }
+    .article-image{
+        object-fit: cover;
+        min-height: 250px;
+    }
+    .article-recent:last-child .article-image{
+        object-position: left;
+    }
+    .about-me-image{
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+}
+
+
+
+
+
